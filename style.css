@@ -1,0 +1,162 @@
+body{
+    display: grid;
+    grid-template-areas: 
+    "cabecalho cabecalho"
+    "imagem texto"
+    "rodape rodape"; 
+    grid-template-columns: 1fr 1fr;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    background: url(images/bg-desktop.svg)  center no-repeat;
+    background-color: hsl(257, 40%, 49%);
+    background-size: cover;
+    color: #fff;
+}
+.cabecalho{
+    grid-area: cabecalho;
+}
+.cabecalho .logo img{
+    padding: 30px;
+    width: 200px;
+}
+.imagem{
+    grid-area: imagem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    margin-left: 40px;
+}
+.imagem img{
+    max-width: 650px;
+    width: 100%;
+}
+.texto{
+    grid-area: texto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 60px;
+}
+.texto h1{
+    font-weight: 600;
+    font-size: 36px;
+   padding: 20px;
+}
+.texto p{
+    font-weight: 400;
+    font-size: 16px;
+    padding: 0 20px;
+}
+.texto .botao{
+    width: 200px;
+    border-radius: 50px;
+    padding: 15px;
+    border: none;
+    background-color:#fff;
+    font-size: 20px;
+    color: hsl(257, 40%, 49%);
+    transition: 0.3s;
+    margin-top: 25px;
+}
+.texto button:hover{
+    background-color:hsl(300, 69%, 71%);
+    cursor: pointer;
+}
+.rodape {
+    grid-area: rodape;
+    display: flex;
+    flex-direction: column;
+}
+.rodape .icones{
+    color: #fff;
+    text-align: end;
+    padding: 0 60px;
+}
+.rodape .icones i{
+    font-size: 16px;
+    transition: 0.3s;
+    padding: 13px;
+    margin: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #fff;
+    border-radius: 100%;
+    height: 13px;
+    width: 13px;
+}
+.rodape .icones i:hover{
+    color:hsl(300, 69%, 71%) ;
+    border-color:hsl(300, 69%, 71%) ;
+}
+@media(max-width:1045px){
+    body{
+        display: block;       
+    }
+    .cabecalho{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .imagem{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .texto{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .rodape{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+}
+@media(max-width:375px){
+    body{
+        display: block;
+        background-image: url(images/bg-mobile.svg);       
+    }
+    .cabecalho{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .imagem {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+    }
+    .texto{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .texto h1{
+        font-size: 20px;
+        padding: 10px 0;
+        text-align: center; 
+    }
+    .texto p{
+        font-size:14px;
+        padding: 10px 0;
+        text-align: center;
+    }
+    .texto button{
+        width: 100px;
+    }
+    .rodape{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+}
